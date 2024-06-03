@@ -47,8 +47,7 @@ dpkg -i cuda-keyring_1.1-1_all.deb
 apt-get update
 apt-get -y install libcudnn9-dev-cuda-12
 
-# "install" cudnn-frontend to ~/
-git clone https://github.com/NVIDIA/cudnn-frontend.git
+
 
 # install MPI (optional, if you intend to use multiple GPUs)
 apt install openmpi-bin openmpi-doc libopenmpi-dev
@@ -58,6 +57,11 @@ apt install openmpi-bin openmpi-doc libopenmpi-dev
 # and ~46GB in ~/.cache/huggingface/datasets/HuggingFaceFW___fineweb
 #git clone https://github.com/karpathy/llm.c.git
 cd llm.c
+
+# "install" cudnn-frontend to ~/
+git clone https://github.com/NVIDIA/cudnn-frontend.git
+
+
 #python dev/data/fineweb.py --version 10B
 
 # compile llm.c (mixed precision, with cuDNN flash-attention)
