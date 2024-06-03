@@ -62,6 +62,9 @@ cd llm.c
 git clone https://github.com/NVIDIA/cudnn-frontend.git
 
 
+printf "Y" | apt install nvidia-cuda-toolkit
+echo "export PATH=/usr/local/cuda-12.5/bin${PATH:+:${PATH}}" >> ~/.profile
+source ~/.profile
 #python dev/data/fineweb.py --version 10B
 
 # compile llm.c (mixed precision, with cuDNN flash-attention)
