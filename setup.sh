@@ -13,9 +13,17 @@ printf "Y" | apt install vim
 echo "________________________________________________________________________"
 echo "Vim Installed"
 echo "________________________________________________________________________"
-echo "Installing net-tools next..."
+echo "Installing wget next..."
 echo "________________________________________________________________________"
-apt printf "Y" | install net-tools
+apt printf "Y" | apt install wget
+
+
+echo "________________________________________________________________________"
+echo "Wget Installed"
+echo "________________________________________________________________________"
+echo "Installing make next..."
+echo "________________________________________________________________________"
+apt printf "Y" | apt install make
 
 # install miniconda
 mkdir -p ~/miniconda3
