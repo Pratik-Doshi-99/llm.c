@@ -76,7 +76,7 @@ make train_gpt2cu USE_CUDNN=1
 
 # if you have multiple GPUs (e.g. 8), simply prepend the mpi command, e.g.:
 # mpirun -np 8 ./train_gpt2cu \ ... (the rest of the args are same)
-mpirun -np 8 ./train_gpt2cu \ 
+mpirun -np 2 ./train_gpt2cu \ 
     -i "dev/data/fineweb10B/fineweb_train_*.bin" \
     -j "dev/data/fineweb10B/fineweb_val_*.bin" \
     -o log124M \
